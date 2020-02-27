@@ -1,0 +1,95 @@
+body {
+  //background-color: red;
+}
+.block-button {
+  margin: 20px 0;
+  &__row{
+    margin: 10px;
+  }
+}
+.block-product {
+  display: flex;
+  width: 100%;
+
+  &.grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .product_list {
+     // border: solid 1px green;
+      flex-basis: 23%;
+      margin: 10px;
+      height: 100%;
+      .block{
+        &_image {
+         // border: solid 1px green;
+          width: 100%;
+          height: 250px;
+          overflow: hidden;
+          img {
+            height: 100%;
+          }
+        }
+        &_name{
+          margin:10px;
+          color:silver
+        }
+        &_price {
+          text-align: center;
+          color: grey;
+          margin: 10px;
+        }
+        &_pay{
+          margin: 10px;
+        }
+      }
+      
+    }
+  }
+  &.list {
+    flex-direction: column;
+    .product_list {
+      display: grid;
+     // border: solid 1px green;
+      margin: 10px;
+      height: 100%;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows:  auto;
+      grid-template-areas: 
+      "image   .   ."
+      "image name price"
+      "image name pay"
+      "image  .    .";
+      .block{
+        &_image {
+          grid-area: image;
+         // border: solid 1px green;
+          height: 200px;
+          overflow: hidden;
+          margin: 10px;
+          img {
+            height: 100%;
+          }
+        }
+        &_name{
+          grid-area: name;
+          //border: solid 1px green;
+          color:silver
+        }
+        &_price {
+          grid-area: price;
+          //border: solid 1px green;
+          text-align: center;
+          color: grey;
+          margin: 20px 0;
+        }
+        &_pay{
+          grid-area:pay;
+          margin: 20px 10px;
+          //border: solid 1px green;
+        }
+      }
+      
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.block-button {
+  margin: 20px 0;
+}
+.block-button__row {
+  margin: 10px;
+}
+.block-product {
+  display: flex;
+  width: 100%;
+}
+.block-product.grid {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.block-product.grid .product_list {
+  flex-basis: 23%;
+  margin: 10px;
+  height: 100%;
+}
+.block-product.grid .product_list .block_image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.block-product.grid .product_list .block_image img {
+  height: 100%;
+}
+.block-product.grid .product_list .block_name {
+  margin: 10px;
+  color: silver;
+}
+.block-product.grid .product_list .block_price {
+  text-align: center;
+  color: grey;
+  margin: 10px;
+}
+.block-product.grid .product_list .block_pay {
+  margin: 10px;
+}
+.block-product.list {
+  flex-direction: column;
+}
+.block-product.list .product_list {
+  display: grid;
+  margin: 10px;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "image   .   ." "image name price" "image name pay" "image  .    .";
+}
+.block-product.list .product_list .block_image {
+  grid-area: image;
+  height: 200px;
+  overflow: hidden;
+  margin: 10px;
+}
+.block-product.list .product_list .block_image img {
+  height: 100%;
+}
+.block-product.list .product_list .block_name {
+  grid-area: name;
+  color: silver;
+}
+.block-product.list .product_list .block_price {
+  grid-area: price;
+  text-align: center;
+  color: grey;
+  margin: 20px 0;
+}
+.block-product.list .product_list .block_pay {
+  grid-area: pay;
+  margin: 20px 10px;
+}
